@@ -1,0 +1,1 @@
+select employee_name, employee_length from employee where employee_length=(select min(employee_length) from employee);

@@ -1,0 +1,1 @@
+delete from employee where employee_id not in (select * from (select employee_id from employee natural inner join customer_banker)as a);

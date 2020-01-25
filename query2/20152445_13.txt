@@ -1,0 +1,1 @@
+update customer set customer_type="VIP" where customer_id in (select customer_id from depositor natural inner join account group by customer_id having sum(balance)>=100);

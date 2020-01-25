@@ -1,0 +1,1 @@
+select a.customer_id, a.customer_name from customer as a where (select count(distinct(branch_name)) from customer natural inner join borrower natural inner join loan natural inner join loan_branch natural inner join branch where customer_id=a.customer_id and branch_city="Seoul")=(select count(branch_name) from branch where branch_city="Seoul");

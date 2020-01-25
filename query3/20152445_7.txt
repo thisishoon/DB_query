@@ -1,0 +1,10 @@
+delimiter $$
+create function num_of_loan(customer_name varchar(45)) returns int
+begin
+	declare num int;
+	select count(loan_number) into num
+	from customer natural inner join borrower
+	where customer.customer_name = customer_name;
+	return num;
+end$$
+delimiter ;

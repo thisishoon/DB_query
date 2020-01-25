@@ -1,0 +1,1 @@
+select distinct customer_name from customer natural inner join borrower natural inner join loan_branch natural inner join branch where customer_city=branch_city;

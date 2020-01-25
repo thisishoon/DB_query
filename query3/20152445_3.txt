@@ -1,0 +1,2 @@
+create view only_account_customer as
+select distinct customer_name, customer_city from customer natural inner join depositor natural inner join account where customer_id not in (select customer_id from customer natural inner join borrower natural inner join loan);

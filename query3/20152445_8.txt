@@ -1,0 +1,1 @@
+select customer_name, customer_city from customer where num_of_loan(customer_name)>2;

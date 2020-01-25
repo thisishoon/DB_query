@@ -1,0 +1,1 @@
+select customer_name from all_loan_customer where branch_name="Soongsil";

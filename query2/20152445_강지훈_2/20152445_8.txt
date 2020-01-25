@@ -1,0 +1,1 @@
+select customer_id, avg(balance) from customer natural inner join depositor natural inner join account where customer_city="Seoul" group by customer_id having count(*)>=3;

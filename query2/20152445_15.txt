@@ -1,0 +1,1 @@
+delete from loan as a where a.amount<=(select sum(payment_amount) from payment where loan_number=a.loan_number);

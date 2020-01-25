@@ -1,0 +1,1 @@
+select branch_name from branch where branch_city="Busan" and asserts>(select min(asserts) from branch where branch_city="Busan");

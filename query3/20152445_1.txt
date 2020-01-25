@@ -1,0 +1,2 @@
+create view all_loan_customer as
+select distinct branch_name, customer_name from customer natural inner join borrower natural inner join loan natural inner join loan_branch natural inner join branch;

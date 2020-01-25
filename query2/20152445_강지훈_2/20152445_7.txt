@@ -1,0 +1,1 @@
+select distinct(customer_id), customer_name from customer natural inner join depositor natural inner join account where customer_id not in (select customer_id from customer natural inner join borrower natural inner join loan);
